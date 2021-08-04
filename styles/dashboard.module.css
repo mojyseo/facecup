@@ -1,0 +1,197 @@
+/* <------ dashboard start ------> */
+
+.dashboard {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.dashboardMain {
+  width: calc(100% - 180px);
+}
+.dashboardMain main {
+  background: var(--background-color);
+  height: calc(100vh - 60px);
+  overflow: auto;
+  direction: rtl;
+  padding: 14px 32px;
+}
+/* <------ dashboard end ------> */
+
+/* <------ header start ------> */
+
+.header {
+  background: var(--second-color);
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.header button {
+  transition: 1s all;
+  z-index: 9;
+  background: var(--main-color);
+  color: white;
+  width: 160px;
+  height: auto;
+  border: none;
+  border-radius: 16px;
+  font-weight: bold;
+  font-family: inherit;
+  cursor: pointer;
+  margin-left: 10%;
+  position: absolute;
+  top: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.headeritem {
+  padding: 5px;
+  transition: 1s all;
+  width: 100%;
+}
+
+.headerbtnicon {
+  position: absolute;
+  right: 16px;
+  top: 4px;
+}
+
+/* <------ header end ------> */
+
+/* <------ sidebar start ------> */
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 180px;
+  background: var(--main-color);
+  background: -moz-linear-gradient(
+    25deg,
+    var(--second-color) 0%,
+    var(--second-color) 85%
+  );
+  background: -webkit-linear-gradient(
+    25deg,
+    var(--main-color) 0%,
+    var(--second-color) 85%
+  );
+  background: linear-gradient(
+    25deg,
+    var(--main-color) 0%,
+    var(--second-color) 85%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=var(--main-color),endColorstr="var(--second-color)",GradientType=1);
+  height: 100vh;
+  border-radius: 0 0 0 36px;
+  color: white;
+}
+
+.sidebartop {
+  padding: 18px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*  logo font */
+  font-family: ui-serif;
+  font-weight: bolder;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 6px 12px 6px 0;
+  color: inherit;
+  transition: 0.2s all ease-in-out;
+}
+.navItem:hover {
+  background: #ffffff30;
+}
+.activeNavItem {
+  background: #ffffff30;
+}
+.linksection {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 125px);
+  justify-content: space-between;
+  padding-bottom: 16px;
+}
+/* <------ sidebar end ------> */
+
+@media only screen and (max-width: 1400px) {
+  /* .sidebar {
+    width: 170px;
+  }
+  .navItem {
+    padding-right: 12px;
+  }
+  .dashboardMain {
+    width: calc(100% - 170px);
+  } */
+}
+
+/* pages ::::: */
+
+/* download Content Page Start*/
+.downloadContentPage img {
+  width: 80%;
+  margin: 12px auto;
+  display: block;
+}
+.downloadContentPage a {
+  display: block;
+  padding: 12px 0;
+}
+@media only screen and (max-width: 1200px) {
+  .downloadContentPage img {
+    width: 92%;
+  }
+}
+/* download Content Page End*/
+
+/* results Page Start*/
+.countdown {
+  height: calc(100vh - 90px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.countdownitem {
+  margin: 0 8px;
+  text-align: center;
+  color: #202020;
+}
+.countdownitem div {
+  background: #131c24;
+  color: white;
+  font-size: 34px;
+  width: 65px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* TODO FONT ADD */
+  font-family: fantasy;
+}
+@media only screen and (max-width: 1200px) {
+}
+/* results Page End*/
+/* send code Page Start*/
+.fileuploaded {
+  background: #e7e7e7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px 16px;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 1200px) {
+}
+/* send code Page End*/

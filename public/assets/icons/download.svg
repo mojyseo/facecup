@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="25.6" height="24" viewBox="0 0 25.6 24">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #6c6c76;
+      }
+    </style>
+  </defs>
+  <path id="Icon_metro-download" data-name="Icon metro-download" class="cls-1" d="M15.371,16.656l6.4-6.4h-4.8v-6.4h-3.2v6.4h-4.8Zm5.818-2.618L19.4,15.831l6.5,2.425L15.371,22.182,4.844,18.256l6.5-2.425L9.553,14.038,2.571,16.656v6.4l12.8,4.8,12.8-4.8v-6.4Z" transform="translate(-2.571 -3.856)"/>
+</svg>

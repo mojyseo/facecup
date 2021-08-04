@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+  <defs>
+    <style>
+      .cls-1, .cls-4 {
+        fill: none;
+      }
+
+      .cls-1 {
+        stroke: #ececec;
+        stroke-width: 2px;
+        stroke-dasharray: 1 1000;
+        opacity: 0;
+      }
+
+      .cls-2 {
+        fill: #ececec;
+      }
+
+      .cls-3 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="Group_73" data-name="Group 73" transform="translate(-6245 -1503)">
+    <g id="Ellipse_15" data-name="Ellipse 15" class="cls-1" transform="translate(6245 1503)">
+      <circle class="cls-3" cx="18" cy="18" r="18"/>
+      <circle class="cls-4" cx="18" cy="18" r="17"/>
+    </g>
+    <path id="Icon_awesome-power-off" data-name="Icon awesome-power-off" class="cls-2" d="M19.027,2.548a11.68,11.68,0,1,1-13.575,0A1.134,1.134,0,0,1,7.1,2.916l.744,1.324A1.13,1.13,0,0,1,7.534,5.7a7.913,7.913,0,1,0,9.416,0,1.124,1.124,0,0,1-.306-1.456l.744-1.324a1.129,1.129,0,0,1,1.639-.367Zm-4.9,9.887V1.131A1.128,1.128,0,0,0,13,0H11.491A1.128,1.128,0,0,0,10.36,1.131V12.436a1.128,1.128,0,0,0,1.131,1.131H13A1.128,1.128,0,0,0,14.129,12.436Z" transform="translate(6250.756 1508.849)"/>
+  </g>
+</svg>

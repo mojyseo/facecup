@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+  <defs>
+    <style>
+      .cls-1, .cls-4 {
+        fill: none;
+      }
+
+      .cls-1 {
+        stroke: #ececec;
+        stroke-width: 2px;
+        stroke-dasharray: 1 1000;
+        opacity: 0;
+      }
+
+      .cls-2 {
+        fill: #ececec;
+      }
+
+      .cls-3 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="Group_74" data-name="Group 74" transform="translate(-6245 -1447)">
+    <g id="Ellipse_15" data-name="Ellipse 15" class="cls-1" transform="translate(6245 1447)">
+      <circle class="cls-3" cx="18" cy="18" r="18"/>
+      <circle class="cls-4" cx="18" cy="18" r="17"/>
+    </g>
+    <path id="Icon_awesome-question" data-name="Icon awesome-question" class="cls-2" d="M10.07,0A9.082,9.082,0,0,0,2,4.267a1.126,1.126,0,0,0,.243,1.541L4.267,7.341a1.125,1.125,0,0,0,1.559-.194C7,5.676,7.871,4.829,9.7,4.829c1.442,0,3.226.928,3.226,2.326,0,1.057-.873,1.6-2.3,2.4-1.66.931-3.858,2.09-3.858,4.988V15A1.125,1.125,0,0,0,7.9,16.125h3.4A1.125,1.125,0,0,0,12.423,15v-.271c0-2.009,5.872-2.093,5.872-7.529C18.3,3.106,14.048,0,10.07,0ZM9.6,17.506a3.247,3.247,0,1,0,3.247,3.247A3.251,3.251,0,0,0,9.6,17.506Z" transform="translate(6252.952 1453)"/>
+  </g>
+</svg>

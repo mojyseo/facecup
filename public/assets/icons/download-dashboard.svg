@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-4 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #ececec;
+        stroke-width: 2px;
+      }
+
+      .cls-1 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-2 {
+        stroke-dasharray: 1 1000;
+        opacity: 0;
+      }
+
+      .cls-3 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="Group_72" data-name="Group 72" transform="translate(-6245 -1009)">
+    <g id="Group_66" data-name="Group 66">
+      <path id="Path_2827" data-name="Path 2827" class="cls-1" d="M22.019,22.5v3.747a1.911,1.911,0,0,1-1.947,1.874H6.447A1.911,1.911,0,0,1,4.5,26.247V22.5" transform="translate(6249.412 1007.69)"/>
+      <path id="Path_2828" data-name="Path 2828" class="cls-1" d="M10.5,15l4.805,4.477L20.111,15" transform="translate(6247.366 1009.874)"/>
+      <path id="Path_2829" data-name="Path 2829" class="cls-1" d="M18,16.881V4.5" transform="translate(6244.671 1011.341)"/>
+      <g id="Ellipse_15" data-name="Ellipse 15" class="cls-2" transform="translate(6245 1009)">
+        <circle class="cls-3" cx="18" cy="18" r="18"/>
+        <circle class="cls-4" cx="18" cy="18" r="17"/>
+      </g>
+    </g>
+  </g>
+</svg>

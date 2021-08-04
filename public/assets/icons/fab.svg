@@ -1,0 +1,21 @@
+<svg id="FAB" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #1f4edb;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <rect id="Rectangle_1786" data-name="Rectangle 1786" class="cls-1" width="24" height="24" rx="5"/>
+  <g id="plus" transform="translate(3.82 3.82)">
+    <line id="Line_182" data-name="Line 182" class="cls-2" y2="16" transform="translate(8.18 0.18)"/>
+    <line id="Line_183" data-name="Line 183" class="cls-2" y2="16.361" transform="translate(16.361 8.18) rotate(90)"/>
+  </g>
+</svg>

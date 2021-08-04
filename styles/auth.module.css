@@ -1,0 +1,64 @@
+.container {
+  display: flex;
+  padding: 4rem;
+  text-align: center;
+}
+.img {
+  height: calc(90vh - 4rem);
+  object-fit: cover;
+}
+.container main {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container main h1 {
+  color: #06102e;
+  font-size: 26px;
+  padding: 11px 25px;
+  border-bottom: #9b9b9b solid 1px;
+}
+
+.btn {
+  width: 300px;
+  height: 44px;
+  font-family: inherit;
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  background: var(--main-color);
+  background: -moz-linear-gradient(
+    45deg,
+    var(--second-color) -35%,
+    var(--second-color) 85%
+  );
+  background: -webkit-linear-gradient(
+    45deg,
+    var(--main-color) -35%,
+    var(--second-color) 85%
+  );
+  background: linear-gradient(
+    45deg,
+    var(--main-color) -35%,
+    var(--second-color) 85%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=var(--main-color),endColorstr="var(--second-color)",GradientType=1);
+  transition: all 0.25s ease-in-out;
+}
+
+.supbtn {
+  font-size: 13px;
+  padding: 8px 0;
+}
+.subbtn {
+  font-size: 13px;
+  padding: 8px 0;
+}
+.subbtn a,
+.supbtn a {
+  color: #06102e;
+}

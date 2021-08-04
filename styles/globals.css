@@ -1,0 +1,92 @@
+:root {
+  --main-color: #9c1be2;
+  --second-color: #292d84;
+  --gray-color: #6c6c76;
+  --background-color: #f0f0f0;
+}
+
+@font-face {
+  font-family: "IRANSans";
+  src: local("IRANSans"),
+    url(../public/assets/fonts/IRANSansWeb.ttf) format("truetype");
+}
+@font-face {
+  font-family: "IranSansBold";
+  src: local("IranSansBold"),
+    url(../public/assets/fonts/IRANSansWeb.ttf) format("truetype");
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: IRANSans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+p {
+  color: var(--gray-color);
+}
+
+h4 {
+  color: #202020;
+}
+/* custom classes */
+.iconbtn {
+  cursor: pointer;
+}
+.btn {
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
+  padding: 1px 8px;
+  margin: 2px;
+}
+.btn1 {
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
+  background-color: rgb(41, 45, 132);
+  color: white;
+  font-size: 18px;
+  padding: 3px 18px;
+  border-radius: 7px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+}
+.crow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rrow {
+  display: flex;
+  align-items: center;
+}
+@media only screen and (max-width: 1080px) {
+  .rrow {
+    flex-direction: column;
+  }
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

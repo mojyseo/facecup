@@ -98,7 +98,7 @@ export default function Index() {
           }
         }
       },
-      first ? 700 : 160
+      first ? 1400 : 160
     );
     return () => {
       clearInterval(counterInterval);

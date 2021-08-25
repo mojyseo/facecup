@@ -181,6 +181,9 @@ div .collapse {
 .rotate {
   transform: rotate(180deg);
 }
+#headerItems.headeritemsshow {
+  max-height: 50vh;
+}
 @keyframes slide-in {
   0% {
     left: 0;
@@ -262,7 +265,7 @@ section {
 #light2.lightstart {
   max-height: 600px;
 }
-@media only screen and (min-width: 1800px) {
+@media only screen and (min-width: 1700px) {
   #carousel {
     height: calc(100vh - 108px);
   }

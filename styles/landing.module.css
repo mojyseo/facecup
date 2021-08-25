@@ -194,8 +194,12 @@
 .item div {
   text-align: center;
 }
+.item div h3 {
+  font-size: 1.4rem;
+}
 .item div p {
-  max-width: 200px;
+  font-size: 1.2rem;
+  max-width: 230px;
   margin-top: 18px;
 }
 /* items end  */
@@ -326,7 +330,7 @@
   background: #f4f6f6;
   color: #5f5f64;
   right: calc((100% - 20%) / 2);
-  font-size: 22px;
+  font-size: 1.5rem;
 }
 .footerrow {
   display: flex;

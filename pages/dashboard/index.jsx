@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import styles from "styles/dashboard/index.module.css";
+import styles from "styles/dashboard.module.css";
 import Dashboard from "components/dashboard";
 export default function Home() {
   return (

@@ -5,21 +5,22 @@ import styles from "styles/dashboard.module.css";
 
 export default function Index() {
   const [state, setstate] = React.useState(false);
+  React.useEffect(() => {
+    if (state) {
+      document.getElementById("headerItems").classList.add("headeritemsshow");
+    } else {
+      document
+        .getElementById("headerItems")
+        .classList.remove("headeritemsshow");
+    }
+  }, [state]);
   return (
     <header className={styles.header}>
       <button onClick={() => setstate(!state)}>
         <div className={styles.headeritem}>نام تیم</div>
-        <div
-          className={styles.headeritem}
-          style={{ display: state ? "block" : "none" }}
-        >
-          پروفایل
-        </div>
-        <div
-          className={styles.headeritem}
-          style={{ display: state ? "block" : "none" }}
-        >
-          خروج از حساب کاربری
+        <div className={styles.headeritems} id="headerItems">
+          <div className={styles.headeritem}>پروفایل</div>
+          <div className={styles.headeritem}>خروج از حساب کاربری</div>
         </div>
         <div className={styles.headerbtnicon}>
           <Image

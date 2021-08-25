@@ -19,8 +19,14 @@
   justify-content: space-around;
   align-content: center;
   font-family: inherit;
+  font-size: 0.9rem;
 }
 .container {
   cursor: pointer;
   height: 38px;
+}
+@media only screen and (min-width: 1700px) {
+  .btn {
+    font-size: 1.3rem;
+  }
 }

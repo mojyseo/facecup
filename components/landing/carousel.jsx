@@ -46,48 +46,64 @@ function SamplePrevArrow(props) {
 export default function Index() {
   const [state, setstate] = React.useState(0);
   const [words, setwords] = React.useState([f, a, c, e, c, u, p]);
+  const [first, setfirst] = React.useState(false);
+
   React.useEffect(() => {
-    const counterInterval = setTimeout(() => {
-      let newwords = words;
-      if (state === 0) {
-        newwords[state] = fF;
-      } else if (state === 1) {
-        newwords[state] = aF;
-      } else if (state === 2) {
-        newwords[state] = cF;
-      } else if (state === 3) {
-        newwords[state] = eF;
-      } else if (state === 4) {
-        newwords[state] = cF;
-      } else if (state === 5) {
-        newwords[state] = uF;
-      } else if (state === 6) {
-        newwords[state] = pF;
-      }
-      setwords(newwords);
-      if (state < words.length) {
-        setstate(state + 1);
-      } else {
-        var hrs = document.getElementsByClassName("sthr");
-        if (hrs.length > 0) {
-          for (let i = 0; i < hrs.length; i++) {
-            const element = hrs[i];
-            element.classList.add("activehr");
-            setTimeout(() => {
-              document
-                .getElementById("facecup-slick-slider")
-                .classList.add("active-facecup-slick-slider");
-              document.getElementById("starter").style.opacity = 0;
+    let check = document.cookie;
+    if (!check) {
+      //set delay
+      setfirst(true);
+      document.cookie = "notfirsttime";
+    }
+  }, []);
+  React.useEffect(() => {
+    const counterInterval = setTimeout(
+      () => {
+        let newwords = words;
+        if (state === 0) {
+          newwords[state] = fF;
+        } else if (state === 1) {
+          newwords[state] = aF;
+        } else if (state === 2) {
+          newwords[state] = cF;
+        } else if (state === 3) {
+          newwords[state] = eF;
+        } else if (state === 4) {
+          newwords[state] = cF;
+        } else if (state === 5) {
+          newwords[state] = uF;
+        } else if (state === 6) {
+          newwords[state] = pF;
+        }
+        setwords(newwords);
+        if (state < words.length) {
+          setstate(state + 1);
+        } else {
+          var hrs = document.getElementsByClassName("sthr");
+          if (hrs.length > 0) {
+            for (let i = 0; i < hrs.length; i++) {
+              const element = hrs[i];
+              element.classList.add("activehr");
               setTimeout(() => {
-                document.getElementById("starter").style.display = "none";
-              }, 1000);
-              document.getElementById("downbtn").style.opacity = 1;
-            }, 600);
+                document
+                  .getElementById("facecup-slick-slider")
+                  .classList.add("active-facecup-slick-slider");
+                document.getElementById("starter").style.opacity = 0;
+                setTimeout(() => {
+                  document.getElementById("starter").style.display = "none";
+                }, 1000);
+                document.getElementById("downbtn").style.opacity = 1;
+              }, 600);
+            }
           }
         }
-      }
-    }, 150);
-    return () => clearInterval(counterInterval);
+      },
+      first ? 700 : 160
+    );
+    return () => {
+      clearInterval(counterInterval);
+      setfirst(false);
+    };
   }, [state]);
 
   const settings = {
@@ -107,8 +123,8 @@ export default function Index() {
           <a className={styles.downbtn} id="downbtn">
             <Image
               src="/assets/icons/down.svg"
-              width={74}
-              height={74}
+              width={64}
+              height={64}
               alt="down-icon"
             />
           </a>

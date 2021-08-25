@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="60" viewBox="0 0 26 60">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #001e6c;
+        font-size: 44px;
+        font-family: SegoeUI-Bold, Segoe UI;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+      }
+    </style>
+  </defs>
+  <text id="E" class="cls-1" transform="translate(13 48)"><tspan x="-11.709" y="0">E</tspan></text>
+</svg>

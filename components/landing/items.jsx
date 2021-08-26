@@ -1,14 +1,17 @@
 import Image from "next/image";
 import styles from "styles/landing.module.css";
 import VisibilitySensor from "react-visibility-sensor";
+import img1 from "public//assets/images/landingitem1.svg";
+import light1 from "public//assets/images/light.svg";
 
+//items part 1
 export default function Index() {
   return (
-    <section id="opportunities">
+    <section id="items1">
       <div className={styles.banner}>
         <div>
           <span>زمان برگزاری مسابقه</span>
-          <span> 15 بهمن ماه 1400</span>
+          <span> آذر - بهمن ماه 1400</span>
         </div>
         <p>مسابقه به‌صورت مجازی برگزار خواهد شد</p>
       </div>
@@ -31,19 +34,9 @@ export default function Index() {
               <p>ارتباط با شرکت های مطرح در این حوزه و موقعیت های شغلی متعدد</p>
             </div>
             <div className={styles.itemimg}>
-              <Image
-                height={270}
-                width={270}
-                src="/assets/images/landingitem1.svg"
-                alt="icon"
-              />
+              <Image src={img1} alt="icon" />
               <div className={styles.light} id="light1">
-                <Image
-                  height={147.34}
-                  width={115.04}
-                  src="/assets/images/light.svg"
-                  alt="icon"
-                />
+                <Image src={light1} alt="icon" />
               </div>
             </div>
           </div>

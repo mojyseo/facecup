@@ -12,6 +12,7 @@ import Items2 from "components/landing/items2";
 import Stats from "components/landing/stats";
 import Faq from "components/landing/faq";
 import Footer from "components/landing/footer";
+import Support from "components/landing/support";
 import { FullPage, Slide } from "react-full-page";
 
 export default function Home() {
@@ -61,6 +62,7 @@ export default function Home() {
           <Footer />
         </Slide>
       </FullPage>
+      <Support />
     </div>
   );
 }

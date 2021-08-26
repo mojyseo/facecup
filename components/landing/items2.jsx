@@ -1,11 +1,12 @@
 import Image from "next/image";
 import styles from "styles/landing.module.css";
 import VisibilitySensor from "react-visibility-sensor";
+//items part 2
 
 export default function Index() {
   return (
-    <section id="opportunities">
-      <div className={styles.items}>
+    <section id="items2">
+      <div className={`${styles.items} ${styles.items2}`}>
         <VisibilitySensor
           onChange={(isVisible) => {
             console.log(isVisible);
@@ -19,9 +20,8 @@ export default function Index() {
           }}
         >
           <div
-            className={styles.item}
+            className={`${styles.item} ${styles.reverseitem}`}
             id="op-item-2"
-            style={{ flexDirection: "row" }}
           >
             <div className={styles.itemcontentreverse}>
               <h3>شبکه سازی</h3>

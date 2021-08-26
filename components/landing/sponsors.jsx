@@ -4,36 +4,37 @@ import styles from "styles/landing.module.css";
 import VisibilitySensor from "react-visibility-sensor";
 
 export default function Index() {
+  function onchange(isVisible) {
+    //spawning sponser images by order
+    if (("isVisible", isVisible)) {
+      const entries = Object.entries(
+        document.getElementsByClassName("sponsorimage")
+      );
+      // orders :
+      var first = [2, 5, 10, 11, 17];
+      var second = [0, 3, 7, 12, 16];
+      var third = [1, 4, 6, 8, 9, 13, 14, 15];
+      entries.map((e, key) => {
+        if (first.includes(key)) {
+          e[1].classList.add("zoomIn");
+        }
+        if (second.includes(key)) {
+          setTimeout(() => {
+            e[1].classList.add("zoomIn");
+          }, 600);
+        }
+        if (third.includes(key)) {
+          setTimeout(() => {
+            e[1].classList.add("zoomIn");
+          }, 1400);
+        }
+      });
+    }
+  }
+
   return (
     <section id="sponsors">
-      <VisibilitySensor
-        onChange={(isVisible) => {
-          console.log(isVisible);
-          if (("isVisible", isVisible)) {
-            const entries = Object.entries(
-              document.getElementsByClassName("sponsorimage")
-            );
-            var first = [2, 5, 10, 11, 17];
-            var second = [0, 3, 7, 12, 16];
-            var third = [1, 4, 6, 8, 9, 13, 14, 15];
-            entries.map((e, key) => {
-              if (first.includes(key)) {
-                e[1].classList.add("zoomIn");
-              }
-              if (second.includes(key)) {
-                setTimeout(() => {
-                  e[1].classList.add("zoomIn");
-                }, 600);
-              }
-              if (third.includes(key)) {
-                setTimeout(() => {
-                  e[1].classList.add("zoomIn");
-                }, 1400);
-              }
-            });
-          }
-        }}
-      >
+      <VisibilitySensor onChange={onchange}>
         <div className={styles.sponsors}>
           <div className={styles.sponsorsec1}>
             <div className={`${styles.sponsorimg} sponsorimage`}>

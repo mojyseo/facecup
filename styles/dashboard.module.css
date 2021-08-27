@@ -186,20 +186,27 @@
 }
 /* index Page end*/
 /* download Content Page Start*/
-.downloadContentPage img {
+.downloadbtn img {
   width: 80%;
   margin: 12px auto;
   display: block;
 }
-.downloadContentPage a {
-  display: block;
+
+.downloadbtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 12px 0;
+  margin-right: 8px;
 }
-@media only screen and (max-width: 1200px) {
-  .downloadContentPage img {
-    width: 92%;
+.downloadbtn:first-child {
+  margin-right: 0;
+}
+
+/* @media only screen and (max-width: 1200px) {
+
   }
-}
+} */
 /* download Content Page End*/
 
 /* results Page Start*/

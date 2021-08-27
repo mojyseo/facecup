@@ -1,8 +1,8 @@
 import Image from "next/image";
 import styles from "styles/landing.module.css";
 import VisibilitySensor from "react-visibility-sensor";
-import img1 from "public//assets/images/landingitem1.svg";
-import light1 from "public//assets/images/light.svg";
+import img1 from "public/assets/images/landingitem1.svg";
+import light1 from "public/assets/images/light.svg";
 
 //items part 1
 export default function Index() {

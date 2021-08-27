@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styles from "styles/dashboard.module.css";
-import Header from "components/header";
+import Header from "./header";
 import Sidebar from "./sidebar";
 export default function Index({ children }) {
   return (

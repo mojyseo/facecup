@@ -31,7 +31,7 @@ export default function Home() {
           <h4>فایل‌های راهنما و دیتاست‌های نمونه جهت آزمایش : </h4>
           <div className="row" style={{ flexWrap: "wrap" }}>
             {items.map((e, key) => (
-              <Link href={e.link}>
+              <Link href={e.link} key={key}>
                 <a className={styles.downloadbtn}>
                   <Image
                     height={24}

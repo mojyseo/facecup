@@ -1,8 +1,16 @@
+import React from "react";
 import Image from "next/image";
 import styles from "styles/landing.module.css";
 import VisibilitySensor from "react-visibility-sensor";
 import { apiAddressBase } from "common";
-export default function Index({ data }) {
+export default function Index() {
+  const [data, setdata] = React.useState([]);
+
+  React.useEffect(() => {
+    Fetch.get("slider", (res) => {
+      setdata(res);
+    });
+  });
   function onchange(isVisible) {
     //spawning sponser images by order
     if (("isVisible", isVisible)) {

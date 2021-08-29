@@ -136,12 +136,14 @@ export default function Index() {
         </Link>
         <Carousel {...settings}>
           {data.map((e, key) => {
-            console.log(apiAddressBase + e.image);
+            let imglink = apiAddressBase + e.image;
+            console.log(imglink);
+
             return (
               <div key={key} className="carousel-image">
                 <Image
                   layout="fill"
-                  src={`${apiAddressBase}${e.image}`}
+                  src={imglink}
                   alt="carousel-image"
                   objectFit="cover"
                 />

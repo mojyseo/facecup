@@ -2,7 +2,6 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "styles/landing.module.css";
-import Fetch from "components/fetch";
 import img1 from "public/assets/images/carousel1.png";
 import img2 from "public/assets/images/carousel2.png";
 import img3 from "public/assets/images/carousel3.png";
@@ -44,12 +43,10 @@ function SamplePrevArrow(props) {
   );
 }
 
-export default function Index() {
+export default function Index({ data }) {
   const [state, setstate] = React.useState(0);
   const [words, setwords] = React.useState([f, a, c, e, c, u, p]);
   const [first, setfirst] = React.useState(false);
-  const [data, setdata] = React.useState([]);
-
   React.useEffect(() => {
     let check = document.cookie;
     if (!check) {
@@ -57,9 +54,6 @@ export default function Index() {
       setfirst(true);
       document.cookie = "notfirsttime";
     }
-    Fetch.get("slider", (res) => {
-      setdata(res);
-    });
   });
   React.useEffect(() => {
     const counterInterval = setTimeout(

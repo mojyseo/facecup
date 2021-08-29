@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import styles from "styles/landing.module.css";
 import VisibilitySensor from "react-visibility-sensor";
+import Fetch from "components/fetch";
 import { apiAddressBase } from "common";
 export default function Index() {
   const [data, setdata] = React.useState([]);

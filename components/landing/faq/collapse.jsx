@@ -5,7 +5,7 @@ import downicon from "public/assets/icons/downicon.svg";
 import questionmark from "public/assets/icons/questionmark.svg";
 import Image from "next/image";
 
-export default function Collapse({ title, index }) {
+export default function Collapse({ title, answer, index }) {
   const [open, setopen] = React.useState(false);
   React.useEffect(() => {
     console.log(open);
@@ -18,7 +18,7 @@ export default function Collapse({ title, index }) {
       document.getElementById(`collapser-${index}`).classList.add("collapse");
       document.getElementById(`cii-${index}`).classList.add("rotate");
     }
-  }, [open]);
+  }, [open, index]);
   function onClick() {
     setopen(!open);
   }
@@ -43,14 +43,7 @@ export default function Collapse({ title, index }) {
         <span className={styles.collapseImg}>
           <Image src={lamp} alt="icon" />
         </span>
-        <span>
-          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده
-          از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و
-          سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز لورم ایپسوم
-          متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
-          گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که
-          لازم است و برای شرایط فعلی تکنولوژی مورد نیاز
-        </span>
+        <span>{answer}</span>
       </div>
     </div>
   );

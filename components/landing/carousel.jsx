@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "styles/landing.module.css";
+import Fetch from "components/fetch";
 import img1 from "public/assets/images/carousel1.png";
 import img2 from "public/assets/images/carousel2.png";
 import img3 from "public/assets/images/carousel3.png";
@@ -19,7 +20,7 @@ import eF from "public/assets/words/fill/E.svg";
 import fF from "public/assets/words/fill/F.svg";
 import pF from "public/assets/words/fill/P.svg";
 import uF from "public/assets/words/fill/U.svg";
-
+import { apiAddressBase } from "common";
 const items = [img1, img2, img3];
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -43,7 +44,8 @@ function SamplePrevArrow(props) {
   );
 }
 
-export default function Index() {
+export default function Index({ data }) {
+  console.log(data);
   const [state, setstate] = React.useState(0);
   const [words, setwords] = React.useState([f, a, c, e, c, u, p]);
   const [first, setfirst] = React.useState(false);
@@ -54,8 +56,11 @@ export default function Index() {
       //set delay
       setfirst(true);
       document.cookie = "notfirsttime";
+      Fetch.get("slider", (res) => {
+        console.log("res", res);
+      });
     }
-  }, []);
+  });
   React.useEffect(() => {
     const counterInterval = setTimeout(
       () => {
@@ -130,10 +135,15 @@ export default function Index() {
           </a>
         </Link>
         <Carousel {...settings}>
-          {items.map((e, key) => {
+          {data.map((e, key) => {
             return (
               <div key={key} className="carousel-image">
-                <Image src={e} alt="carousel-image" />
+                <Image
+                  layout="fill"
+                  src={apiAddressBase + e.image}
+                  alt="carousel-image"
+                  objectFit="cover"
+                />
               </div>
             );
           })}

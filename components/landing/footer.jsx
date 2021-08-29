@@ -5,7 +5,7 @@ import { landingRoutes } from "routes";
 
 export default function Index() {
   return (
-    <section className={styles.footer}>
+    <section className={styles.footer} id="footer">
       <div style={{ position: "relative" }}>
         <hr />
 

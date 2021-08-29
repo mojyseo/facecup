@@ -16,8 +16,8 @@ export const landingRoutes = [
   { title: "درباره مسابقه", name: "about" },
   { title: "حامیان", name: "sponsors" },
   { title: "فرصت‌های شغلی", name: "opportunities" },
-  { title: "کمیته‌ علمی", name: "scientific-committee" },
-  { title: "وبلاگ", name: "blog" },
-  { title: "راهنمای شرکت در مسابقه", name: "partisipation-guide" },
-  { title: "تماس با ما", name: "contact" },
+  // { title: "کمیته‌ علمی", name: "scientific-committee" },
+  // { title: "وبلاگ", name: "blog" },
+  // { title: "راهنمای شرکت در مسابقه", name: "partisipation-guide" },
+  { title: "تماس با ما", name: "footer" },
 ];

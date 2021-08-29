@@ -1,20 +1,30 @@
 .container {
   display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 4rem;
   text-align: center;
+  height: 100vh;
+}
+.row {
+  flex-direction: row;
+}
+.rowReverse {
+  flex-direction: row-reverse;
 }
 .img {
-  height: calc(90vh - 4rem);
   object-fit: cover;
+  height: fit-content;
+  width: 60%;
 }
-.container main {
+.container form {
   width: 40%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.container main h1 {
+.container form h1 {
   color: #06102e;
   font-size: 26px;
   padding: 11px 25px;
@@ -49,10 +59,14 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=var(--main-color),endColorstr="var(--second-color)",GradientType=1);
   transition: all 0.25s ease-in-out;
 }
-
+.link {
+  display: inline-block;
+  padding: 0 5px;
+}
 .supbtn {
   font-size: 13px;
   padding: 8px 0;
+  color: #6c6c76;
 }
 .subbtn {
   font-size: 13px;
@@ -60,5 +74,16 @@
 }
 .subbtn a,
 .supbtn a {
-  color: #06102e;
+  color: #0a1a4b;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 1080px) {
+  .container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .container form {
+    width: 100%;
+  }
 }

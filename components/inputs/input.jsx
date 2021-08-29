@@ -40,9 +40,11 @@ export default function Index(props) {
           }}
           onLoad={(e) => {}}
         />
-        {props.icon && props.icon}
+        <div className={`${styles.icon} ${focus && styles.focusicon}`}>
+          {props.icon && props.icon}
+        </div>
       </div>
-      <span style={{ visibility: focus ? "visible" : "hidden" }}>
+      <span className={`${styles.info} ${focus && styles.focusinfo}`}>
         {props.info}
       </span>
     </div>

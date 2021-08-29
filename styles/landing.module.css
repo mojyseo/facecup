@@ -40,6 +40,7 @@
 
   color: #001e6c;
   border: 1px solid #001e6c;
+  min-width: fit-content;
 }
 .btn:hover {
   background: #001e6c;
@@ -62,6 +63,7 @@
   background: #001e6c;
   color: white;
   border: 1px solid #001e6c;
+  min-width: fit-content;
 }
 .btnFill:hover {
   background: white;
@@ -98,23 +100,28 @@
 }
 
 /* carousel end */
+/* about start */
 .about {
-  padding: 80px 15%;
+  padding: 80px var(--body-padding-horizontal);
   display: flex;
   align-items: center;
   justify-content: center;
   align-content: center;
 }
 .about p {
-  font-size: 18px;
+  font-size: 1.3rem;
   margin-top: 24px;
 }
 .about h1 {
   color: #3d3d3f;
+  font-size: 1.8rem;
 }
 .about .btn1 {
   margin: 18px 0;
 }
+/* about end */
+/* items start - banner  */
+
 .banner {
   background: #ffaa4c;
   color: #001e6c;
@@ -127,11 +134,12 @@
   justify-content: center;
 }
 .banner div span {
-  font-size: 1.9rem;
+  font-size: 2rem;
   font-weight: bold;
 }
 .banner p {
   color: #001e6c;
+  font-size: 1.3rem;
 }
 
 /* items start  */
@@ -217,7 +225,7 @@
   grid-template-rows: repeat(3, 1fr);
   grid-column-gap: 32px;
   grid-row-gap: 28px;
-  padding: 6vh 10vw;
+  padding: 4vh var(--body-padding-horizontal);
   min-height: 58vh;
 }
 .sponsors h3 {
@@ -262,7 +270,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 32px 10%;
+  padding: 32px var(--body-padding-horizontal);
   width: 100%;
 }
 
@@ -278,7 +286,7 @@
 /* stats end  */
 /* faq start  */
 .faq {
-  padding: 32px 10%;
+  padding: 32px var(--body-padding-horizontal);
   overflow-y: scroll;
 }
 .faq h3 {
@@ -326,10 +334,10 @@
 /* footer start  */
 .footer {
   position: relative;
-  padding: 32px 10%;
+  padding: 32px var(--body-padding-horizontal);
 }
 .footer hr {
-  margin: 7vh 10%;
+  margin: 7vh var(--body-padding-horizontal);
 }
 .footertitle {
   position: absolute;

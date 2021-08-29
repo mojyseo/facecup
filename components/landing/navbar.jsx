@@ -35,7 +35,7 @@ export default function Index() {
         </Link>
 
         <div className={styles.vr}></div>
-        <Link href={"/dashboard"}>
+        <Link href={"/auth/login"}>
           {/* <Link href={"/auth/login"}> */}
           <a className={styles.btn}>ورود</a>
         </Link>

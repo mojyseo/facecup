@@ -3,6 +3,7 @@
   --second-color: #292d84;
   --gray-color: #6c6c76;
   --background-color: #f0f0f0;
+  --body-padding-horizontal: 7%;
 }
 
 @font-face {
@@ -62,6 +63,18 @@ p {
 h4 {
   color: #202020;
 }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 /* custom classes */
 .iconbtn {
   cursor: pointer;
@@ -168,6 +181,9 @@ h4 {
   max-height: 100vh;
   top: 0;
 }
+.carousel-image {
+  height: calc(100vh - 72px);
+}
 .carousel-image div {
   display: block !important;
 }
@@ -269,8 +285,12 @@ section {
   #carousel {
     height: calc(100vh - 108px);
   }
-  .carousel-image div {
+
+  .carousel-image {
     min-height: calc(100vh - 108px);
+  }
+  .active-facecup-slick-slider {
+    max-height: calc(100vh - 108px);
   }
   .btn1 {
     font-size: 1.7rem;

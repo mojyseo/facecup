@@ -1,42 +1,49 @@
 import styles from "styles/auth.module.css";
 import Link from "next/link";
 import Image from "next/image";
-export default function Index({ title, btntext, type, children }) {
+import img from "public/assets/images/authimage.png";
+export default function Index({
+  title,
+  dir,
+  btnText,
+  type,
+  onSubmit,
+  children,
+}) {
   return (
     <div
-      className={styles.container}
-      style={{ flexDirection: type === "register" ? "row" : "row-reverse" }}
+      className={`${styles.container} ${
+        dir === "r" ? styles.row : styles.rowReverse
+      } `}
+      style={{}}
     >
-      <Image
-        width={627}
-        height={584}
-        src="/assets/images/authimage.png"
-        alt="cover"
-        className={styles.img}
-      />
-      <main>
+      <div className={styles.img}>
+        <Image src={img} alt="cover" />
+      </div>
+      <form onSubmit={onSubmit}>
         <h1>{title}</h1>
         {children}
         {type === "register" && (
           <span className={styles.supbtn}>
-            شما با ثبت نام در فیس‌کاپ{" "}
+            شما با ثبت نام در فیس‌کاپ
             <Link href="">
-              <a>شرایط استفاده از خدمات</a>
-            </Link>{" "}
-            را میپذیرید.
+              <a className={styles.link}>شرایط استفاده از خدمات</a>
+            </Link>
+            را میپذیرید
           </span>
         )}
-        <button className={styles.btn}>
-          {type === "register" ? "ثبت نام" : "وارد شوید"}
+        <button className={styles.btn} type="submit">
+          {btnText}
         </button>
-        {type === "register" ? (
+        {type === "register" && (
           <span className={styles.subbtn}>
             قبلاً ثبت نام کرده‌اید؟
             <Link href="/auth/login">
               <a>وارد شوید</a>
             </Link>
           </span>
-        ) : (
+        )}
+        {type === "login" && (
           <div>
             <div className={styles.subbtn}>
               <Link href="/auth/login">
@@ -51,7 +58,7 @@ export default function Index({ title, btntext, type, children }) {
             </span>
           </div>
         )}
-      </main>
+      </form>
     </div>
   );
 }

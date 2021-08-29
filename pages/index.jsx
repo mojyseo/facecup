@@ -1,7 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import Link from "next/link";
-import Image from "next/image";
+import { apiAddress } from "common";
 import styles from "styles/landing.module.css";
 import Navbar from "components/landing/navbar";
 import Carousel from "components/landing/carousel";
@@ -18,9 +17,9 @@ import { FullPage, Slide } from "react-full-page";
 const description =
   "یکی از راه‌های کشف و شکوفایی استعدادها و همچنین ایجاد محیط رقابتی مناسب بین آن ها، برگزاری مسابقات عملی با استانداردهای بین‌المللی است. در زمینه بازشناسی چهره، موسسه NIST مسابقات مختلفی را تحت عنوان FRVT برگزار می‌کند که امروزه به‌عنوان مرجعی برای رقابت شرکت‌ها و گروه‌های تحقیقاتی مختلف در این زمینه شناخته می‌شود. ";
 
-export default function Home() {
+export default function Home({ sponsorsData, faqData, sliderData }) {
   //this component uses an slider with different slide componnets
-
+  console.log(sponsorsData);
   return (
     <div className={styles.container}>
       <Head>
@@ -43,7 +42,7 @@ export default function Home() {
       <FullPage>
         <Slide>
           <Navbar />
-          <Carousel />
+          <Carousel data={sliderData} />
         </Slide>
         <Slide>
           <About />
@@ -55,13 +54,13 @@ export default function Home() {
           <Items2 />
         </Slide>
         <Slide>
-          <Sponsors />
+          <Sponsors data={sponsorsData} />
         </Slide>
         <Slide>
           <Stats />
         </Slide>
         <Slide>
-          <Faq />
+          <Faq data={faqData} />
         </Slide>
         <Slide>
           <Footer />
@@ -72,7 +71,22 @@ export default function Home() {
   );
 }
 export async function getStaticProps(context) {
+  const sponsors = await fetch(`${apiAddress}sponsor`);
+  const sponsorsData = await sponsors.json();
+
+  const faq = await fetch(`${apiAddress}faq`);
+  const faqData = await faq.json();
+
+  const slider = await fetch(`${apiAddress}slider`);
+  const sliderData = await slider.json();
+
+  // if (!data) {
+  //   return {
+  //     notFound: true,
+  //   };
+  // }
+
   return {
-    props: {}, // will be passed to the page component as props
+    props: { sponsorsData, faqData, sliderData }, // will be passed to the page component as props
   };
 }

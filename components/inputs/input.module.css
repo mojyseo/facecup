@@ -19,11 +19,23 @@
   width: 300px;
 }
 
-.inputcontainer img {
-  position: absolute;
-  left: 0;
+.icon {
   width: 24px;
   height: 24px;
+  position: absolute !important;
+  left: 5px;
+  top: 5px;
+  transition: all 0.3s ease-in-out;
+}
+.focusicon {
+  opacity: 0;
+}
+.info {
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+}
+.focusinfo {
+  opacity: 1;
 }
 
 .inputcontainer label {
@@ -46,6 +58,7 @@
   z-index: 20;
   color: #0068ff;
 }
+
 .inputcontainer .filledlabel {
   font-size: 11px;
   top: -10px;

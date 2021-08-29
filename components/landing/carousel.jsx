@@ -45,11 +45,10 @@ function SamplePrevArrow(props) {
 }
 
 export default function Index() {
-  console.log(data);
   const [state, setstate] = React.useState(0);
   const [words, setwords] = React.useState([f, a, c, e, c, u, p]);
   const [first, setfirst] = React.useState(false);
-  const [data, setData] = React.useState(false);
+  const [data, setdata] = React.useState([]);
 
   React.useEffect(() => {
     let check = document.cookie;
@@ -59,7 +58,7 @@ export default function Index() {
       document.cookie = "notfirsttime";
     }
     Fetch.get("slider", (res) => {
-      setData(res);
+      setdata(res);
     });
   });
   React.useEffect(() => {
@@ -137,11 +136,12 @@ export default function Index() {
         </Link>
         <Carousel {...settings}>
           {data.map((e, key) => {
+            console.log(apiAddressBase + e.image);
             return (
               <div key={key} className="carousel-image">
                 <Image
                   layout="fill"
-                  src={apiAddressBase + e.image}
+                  src={`${apiAddressBase}${e.image}`}
                   alt="carousel-image"
                   objectFit="cover"
                 />
